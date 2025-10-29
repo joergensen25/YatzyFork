@@ -5,7 +5,7 @@ package models;
  */
 public class YatzyResultCalculator {
 
-    private Die[] dice; // Array af terninger
+    private final Die[] dice; // Array af terninger
 
     public YatzyResultCalculator(Die[] dice) {
         this.dice = dice; // Constructor
