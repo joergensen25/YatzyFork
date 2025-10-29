@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bed1782-295b-4529-b5e0-ce21edd298f8" name="Changes" comment="Ændringer kl 12.">
+    <list default="true" id="7bed1782-295b-4529-b5e0-ce21edd298f8" name="Changes" comment="Tilføjede kommentarer 12.30">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/YatzyResultCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/YatzyResultCalculator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/gui/YatzyGui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/gui/YatzyGui.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +66,7 @@
     "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.YatzyResultsCalculatorTests">
+  <component name="RunManager" selected="Application.YatzyApp">
     <configuration name="YatzyApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="gui.YatzyApp" />
       <module name="Yatzy" />
@@ -123,9 +123,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.YatzyApp" />
         <item itemvalue="JUnit.YatzyResultsCalculatorTests" />
         <item itemvalue="JUnit.YatzyResultsCalculatorTests.onePairScoreTests" />
-        <item itemvalue="Application.YatzyApp" />
         <item itemvalue="JUnit.YatzyResultsCalculatorTests.upperSectionScoreTests" />
       </list>
     </recent_temporary>
@@ -155,6 +155,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added JavaFx libs" />
     <MESSAGE value="Ændringer kl 12." />
-    <option name="LAST_COMMIT_MESSAGE" value="Ændringer kl 12." />
+    <MESSAGE value="Tilføjede kommentarer 12.30" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tilføjede kommentarer 12.30" />
   </component>
 </project>

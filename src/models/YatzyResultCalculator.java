@@ -7,7 +7,6 @@ public class YatzyResultCalculator {
 
     private Die[] dice; // Array af terninger
 
-
     public YatzyResultCalculator(Die[] dice) {
         this.dice = dice; // Constructor
     }
@@ -19,13 +18,6 @@ public class YatzyResultCalculator {
         }
         return counts;
     }
-
-    /**
-     * Calculates the score for Yatzy uppersection
-     *
-     * @param eyes eye value to calculate score for. eyes should be between 1 and 6
-     * @return the score for specified eye value
-     */
 
     public int upperSectionScore(int eyes) { // Metode beregner scoreren for én af de øverste sektioner.
         int sum = 0;
