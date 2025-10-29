@@ -18,4 +18,6 @@ public class RaffleCup {
     public Die[] getDice() {
         return dice;
     }
+
+
 }
