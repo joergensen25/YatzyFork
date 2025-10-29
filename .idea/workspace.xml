@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7bed1782-295b-4529-b5e0-ce21edd298f8" name="Changes" comment="Added JavaFx libs">
+    <list default="true" id="7bed1782-295b-4529-b5e0-ce21edd298f8" name="Changes" comment="Ændringer kl 12.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Yatzy.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Yatzy.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/models/RaffleCup.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/RaffleCup.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/YatzyResultCalculator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/YatzyResultCalculator.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,6 +154,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added JavaFx libs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added JavaFx libs" />
+    <MESSAGE value="Ændringer kl 12." />
+    <option name="LAST_COMMIT_MESSAGE" value="Ændringer kl 12." />
   </component>
 </project>

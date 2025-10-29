@@ -13,7 +13,7 @@ public class YatzyResultCalculator {
     }
 
     private int[] countEyes() { // Hjælpemetode, der tæller hvor mange gange hvert øje (1-6) forekommer
-        int[] counts = new int[7]; // 7 pladser (0-6), ignorerer indeks 0, så så counts[1] tæller 1'ere osv.
+        int[] counts = new int[7]; // 7 pladser (0-6), ignorerer indeks 0, så counts[1] tæller 1'ere osv.
         for (Die die : dice) { // for-each loop, gennemgår alle 5 terninger i arrayet dice.
             counts[die.getEyes()]++; // Henter værdien (die.getEyes()), og lægger 1 til tælleren, for det tal.
         }
@@ -61,16 +61,16 @@ public class YatzyResultCalculator {
     }
 
     public int threeOfAKindScore() {
-        int[] counts = countEyes();
-        for (int i = 6; i >= 1; i--) {
-            if (counts[i] >= 3) {
-                return i * 3;
+        int[] counts = countEyes(); // Bruger igen arrayet der tæller antal forekomster
+        for (int i = 6; i >= 1; i--) { // Tæller ned fra 6.
+            if (counts[i] >= 3) { // Hvis der er 3 (eller flere) forekomster af samme antal øjne:
+                return i * 3; // Returnerer 3* antal øjne. (Man kan ikke få flere point end svarende til 3 af de samme, selvom man har flere)
             }
         }
         return 0;
     }
 
-    public int fourOfAKindScore() {
+    public int fourOfAKindScore() { // Samme logik som metoden ovenover.
         int[] counts = countEyes();
         for (int i = 6; i >= 1; i--) {
             if (counts[i] >= 4) {
@@ -102,7 +102,19 @@ public class YatzyResultCalculator {
 
     public int fullHouseScore() {
         int[] counts = countEyes();
+        int threeSame = 0; // Variabel der holder det antal øjne, som der er tre ens af.
+        int twoSame = 0; // Variabel der holder det antal øjne, som der er to ens af.
 
+        for (int i = 1; i <= 6; i++) {
+            if (counts[i] == 3) // Hvis der er præcis 3 forekomster af et antal øjne, sættes variablen til det antal øjne.
+                threeSame = i;
+            if (counts[i] == 2) // Hvis der er præcis 2 forekomster af et antal øjne, sættes variablen til det antal øjne.
+                twoSame = i;
+            }
+
+        if (twoSame > 0 && threeSame > 0) { // Hvis der er en faktisk værdi i begge de to variable, returneres point antallet.
+            return twoSame * 2 + threeSame * 3;
+        }
         return 0;
     }
 
