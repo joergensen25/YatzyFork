@@ -38,7 +38,6 @@ public class YatzyGui extends Application {
 
     private final Button btnThrowDice = new Button("Kast terningerne");
 
-    IntegerField
     private void initContent(GridPane dicePane) {
         dicePane.setGridLinesVisible(false);
         dicePane.setPadding(new Insets(20));
