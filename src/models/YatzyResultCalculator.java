@@ -5,12 +5,13 @@ package models;
  */
 public class YatzyResultCalculator {
 
+    private Die[] dice;
     /**
      *
      * @param dice
      */
     public YatzyResultCalculator(Die[] dice) {
-        //TODO: implement YatzyResultCalculator constructor.
+        this.dice = dice;
     }
 
     /**
@@ -19,8 +20,11 @@ public class YatzyResultCalculator {
      * @return the score for specified eye value
      */
     public int upperSectionScore(int eyes) {
-        //TODO: Implement upperSectionScore method.
-        return 0;
+        int sum = 0;
+        for (Die die : dice) {
+            if (die.getEyes() == eyes) sum += eyes;
+        }
+        return sum;
     }
 
     public int onePairScore() {
@@ -59,7 +63,10 @@ public class YatzyResultCalculator {
     }
 
     public int chanceScore() {
-        //TODO: implement chanceScore method.
+        int sum = 0;
+        for (Die die : dice) {
+            sum += die.getEyes();
+        }
         return 0;
     }
 
