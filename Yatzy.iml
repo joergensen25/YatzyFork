@@ -24,7 +24,6 @@
         <SOURCES />
       </library>
     </orderEntry>
-    <orderEntry type="library" scope="TEST" name="openjfx.javafx.controls" level="project" />
     <orderEntry type="library" exported="" name="javafx.base" level="application" />
     <orderEntry type="library" name="javafx" level="application" />
     <orderEntry type="module-library" scope="TEST">
@@ -43,5 +42,6 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="openjfx.javafx.controls" level="application" />
   </component>
 </module>

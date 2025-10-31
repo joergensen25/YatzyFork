@@ -1,6 +1,5 @@
 package gui;
 
-import com.sun.javafx.scene.control.IntegerField;
 import javafx.application.Application;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
@@ -10,6 +9,7 @@ import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import models.Die;
 import models.RaffleCup;
@@ -19,10 +19,14 @@ public class YatzyGui extends Application {
     public void start(Stage primaryStage) {
         primaryStage.setTitle("Yatzy");
         GridPane dicePane = new GridPane();
-        this.initContent(dicePane);
-        // GridPane scorePane = new GridPane();
+        this.initDicePane(dicePane);
 
-        Scene scene = new Scene(dicePane);
+        GridPane scorePane = new GridPane();
+        this.initScorePane(scorePane);
+
+        VBox mainPane = new VBox(20, dicePane, scorePane);
+
+        Scene scene = new Scene(mainPane);
         primaryStage.setScene(scene);
         primaryStage.show();
     }
@@ -38,7 +42,9 @@ public class YatzyGui extends Application {
 
     private final Button btnThrowDice = new Button("Kast terningerne");
 
-    private void initContent(GridPane dicePane) {
+    private final TextField[] txfPoint = new TextField[6];
+
+    private void initDicePane(GridPane dicePane) {
         dicePane.setGridLinesVisible(false);
         dicePane.setPadding(new Insets(20));
         dicePane.setHgap(10);
@@ -86,4 +92,33 @@ public class YatzyGui extends Application {
         }
 
     }
+
+    private void initScorePane(GridPane scorePane) {
+        scorePane.setPadding(new Insets(20));
+        scorePane.setHgap(50);
+        scorePane.setVgap(10);
+        scorePane.setStyle("-fx-border-color: grey; -fx-border-width: 2; -fx-border-radius: 5; -fx-background-color: #f5f5f5;");
+
+        Label lbl1 = new Label("1'ere");
+        Label lbl2 = new Label("2'ere");
+        Label lbl3 = new Label("3'ere");
+        Label lbl4 = new Label("4'ere");
+        Label lbl5 = new Label("5'ere");
+        Label lbl6 = new Label("6'ere");
+        scorePane.add(lbl1, 0, 0);
+        scorePane.add(lbl2, 0, 1);
+        scorePane.add(lbl3, 0, 2);
+        scorePane.add(lbl4, 0, 3);
+        scorePane.add(lbl5, 0, 4);
+        scorePane.add(lbl6, 0, 5);
+
+        for (int i = 0; i < 6; i++) {
+            txfPoint[i] = new TextField();
+            scorePane.add(txfPoint[i], 1, i);
+            txfPoint[i].setPrefWidth(60);
+            txfPoint[i].setPrefHeight(20);
+        }
+
+    }
+
 }
